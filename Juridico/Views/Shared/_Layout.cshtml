@@ -1,0 +1,186 @@
+﻿@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Juridico</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Juridico.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Juridico</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Juridico - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+*@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+    <link rel="canonical" href="https://demo-basic.adminkit.io/ui-forms.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Sistema Jurídico</title>
+
+    <link href="~/css/toastr.min.css" rel="stylesheet">
+    <link href="~/css/app.css" rel="stylesheet">
+    <link href="~/css/loading.css" rel="stylesheet">
+    @await RenderSectionAsync("CSS", required: false)
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle">Sistema Jurídico</span>
+                </a>
+
+                <ul class="sidebar-nav">
+
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle"></i> <span class="align-middle">Clientes</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="index.html">
+                            <i class="align-middle"></i> <span class="align-middle">Casos</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-item" href="@Url.Action("Logout","Autenticacao")">
+                                Sair <i class="fa fa-sign-out"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+
+
+                    @RenderBody()
+
+                    @*<div class="mb-3">
+                    <h1 class="h3 d-inline align-middle">Forms</h1>
+                    <a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
+                    Get more form examples
+                    </a>
+                    </div>
+                    <div class="row">
+                    <div class="col-12 col-lg-12">
+                    <div class="card">
+                    <div class="card-header">
+                    <h5 class="card-title mb-0">Input</h5>
+                    </div>
+                    <div class="card-body">
+                    <input type="text" class="form-control" placeholder="Input">
+                    </div>
+                    </div>
+
+
+                    </div>
+                    </div>*@
+
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <div class="loading">
+        <div class="loader"></div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.10.13/jquery.mask.min.js" integrity="sha512-WazWVZu8qV7xpWrAmf6IhkpZ2VrT/5J/8duogXyjb/ogIdi2JQ4Z/v2tQQEa6SKsr1Fao4QA39wqeS05sCtbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/toastr.min.js"></script>
+    <script src="~/js/utils/requisicao.js"></script>
+    <script src="~/js/utils/masks.js"></script>
+    <script src="~/js/utils/validators.js"></script>
+    <script src="~/js/utils/form.js"></script>
+    <script src="~/js/app.js"></script>
+    <script>
+        $(".loading").fadeOut();
+    </script>
+    @await RenderSectionAsync("JS", required: false)
+</body>
+
+</html>

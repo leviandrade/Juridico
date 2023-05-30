@@ -1,0 +1,211 @@
+﻿@model Juridico.UI.Web.Areas.Cliente.ViewModels.CadastroViewModel
+
+@{
+    ViewBag.Title = "Questionário";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@section JS{
+    <script src="~/js/jquery.tmpl.min.js"></script>
+    <script src="~/js/cliente/cadastro.js" type="text/javascript"></script>
+}
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fa fa-user"></i> Cadastro Cliente
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row" style="margin:auto">
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="card mb-3 ">
+
+                                <div class="card-body">
+
+                                    @using (Html.BeginForm("Incluir", "Cliente", new { area = "Cliente" }, FormMethod.Post, true, new { id = "frmCliente", @class = "form-horizontal", onsubmit = "salvar(this,event);" }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden" name="id" />
+                                    <div class="row clearfix">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Nome </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="nome" class="form-control" required="required" />
+                                                @*                                                @Html.TextBoxFor(p => p.Cliente.Nome, new { @class = "form-control",  required = "required" })
+                                            *@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> CPF </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="cpf" class="form-control cpf" required="required" />
+                                                @*                                                @Html.TextBoxFor(p => p.Cliente.Cpf, new { @class = "form-control cpf",  required = "required" })
+                                            *@
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> RG </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="rg" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Rg, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> CEP: </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="cep" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.CEP, new { @class = "form-control cep" })
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Endereço: </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="endereco" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Endereco, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Número </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="numero" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Numero, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row clearfix">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Bairro: </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="bairro" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Bairro, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Cidade </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="cidade" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Cidade, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Estado </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="estado" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Estado, new { @class = "form-control"})
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Complemento </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="complemento" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Complemento, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Email </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="email" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Email, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Telefone </label><label class="control-label font-bold validacao"></label><br />
+                                                <input type="text" name="telefone" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Telefone, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Profissão </label><label class="control-label font-bold validacao"></label><br />
+                                               <input type="text" name="profissao" class="form-control" />
+@*                                                @Html.TextBoxFor(p => p.Cliente.Profissao, new { @class = "form-control" })
+*@                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label font-bold"> Estado Civil </label><label class="control-label font-bold validacao"></label><br />
+                                                @Html.DropDownList("estadoCivil", Model.ListaEstadoCivil, "--Selecione", new { @class = "form-control select2" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item d-none" id="divArquivos">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Arquivos
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row" style="margin:auto">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3 ">
+
+                            <div class="card-body">
+                                <label for="imgInp" class="custom-file-upload" style="   border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;    border-radius: 3px;
+    background-color: white;">
+                                    <i class="fa fa-cloud-upload"></i> Adicionar Arquivo
+                                </label>
+                                <input id="imgInp" type="file" style="display: none;" />
+                                <div id="divArquivos" style="text-align:center;display: flex;margin:auto;    flex-wrap: wrap;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 text-end">
+            <button onclick="salvar(event)" id="btn-salvar" class="btn btn-success" style="    position: fixed;
+    right: 58px;
+    z-index: 100;
+    border-radius: 2px;
+    top: 86%;
+    width: 130px;
+    height: 30px;">
+                Salvar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-jquery-tmpl" id="tmpl-arquivo">
+    <div style="width:48%;padding: 5px;" class="divArquivo">
+                    <input type="hidden" name="idClienteArquivo" class="idClienteArquivo" value="${idClienteArquivo}" />
+            <img class="arquivoAdicionado" src="${src}" alt="your image" style="height: 250px;border: 2px solid black;padding: 1px;margin:2px "/>
+            <br/>
+            <input type="text" class="form-control descricaoArquivo" placeholder="Digite uma descrição para o arquivo" /></div>
+</script>

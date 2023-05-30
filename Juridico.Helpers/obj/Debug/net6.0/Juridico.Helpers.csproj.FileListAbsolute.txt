@@ -1,0 +1,12 @@
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\bin\Debug\net6.0\Juridico.Helpers.deps.json
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\bin\Debug\net6.0\Juridico.Helpers.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\bin\Debug\net6.0\Juridico.Helpers.pdb
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.csproj.AssemblyReference.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.AssemblyInfoInputs.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.AssemblyInfo.cs
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\refint\Juridico.Helpers.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\Juridico.Helpers.pdb
+C:\Users\Levi\source\repos\Juridico\Juridico.Helpers\obj\Debug\net6.0\ref\Juridico.Helpers.dll

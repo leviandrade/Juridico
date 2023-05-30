@@ -1,0 +1,13 @@
+﻿.divPrincipal {
+    margin-left: 3%; 
+    margin-right:3%;
+}
+
+.comboUnidadeTerceiro {
+    margin-top: 1%;
+    min-width:400px
+}
+.chosen-choices {
+    max-height: 150px;
+    overflow-y: scroll!important;
+}

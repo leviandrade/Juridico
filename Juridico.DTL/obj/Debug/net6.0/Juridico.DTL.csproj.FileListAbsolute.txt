@@ -1,0 +1,12 @@
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\bin\Debug\net6.0\Juridico.DTL.deps.json
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\bin\Debug\net6.0\Juridico.DTL.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\bin\Debug\net6.0\Juridico.DTL.pdb
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.csproj.AssemblyReference.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.AssemblyInfoInputs.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.AssemblyInfo.cs
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.csproj.CoreCompileInputs.cache
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\refint\Juridico.DTL.dll
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\Juridico.DTL.pdb
+C:\Users\Levi\source\repos\Juridico\Juridico.DTL\obj\Debug\net6.0\ref\Juridico.DTL.dll

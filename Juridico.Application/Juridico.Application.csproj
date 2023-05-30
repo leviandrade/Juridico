@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Juridico.Dominio\Juridico.Domain.csproj" />
+    <ProjectReference Include="..\Juridico.DTL\Juridico.DTL.csproj" />
+    <ProjectReference Include="..\Juridico.Helpers\Juridico.Helpers.csproj" />
+    <ProjectReference Include="..\Juridico.Infra.Data\Juridico.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
